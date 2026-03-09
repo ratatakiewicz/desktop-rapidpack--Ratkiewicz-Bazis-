@@ -5,5 +5,19 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RapidPack.MainWindow"
         Title="RapidPack">
-    Welcome to Avalonia!
+    <!-- Dodano Grid, TextBox i StackPanel -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel>
+        
+            <TextBox Watermark="Wpisz wysokość [cm] ..." Width="175">
+            </TextBox>
+            <TextBox Watermark="Wpisz głębokość [cm] ..." Width="177">
+            </TextBox>
+            <TextBox Watermark="Wpisz szerokość [cm] ..." Width="177">
+            </TextBox>
+        </StackPanel>
+    </Grid>
 </Window>
