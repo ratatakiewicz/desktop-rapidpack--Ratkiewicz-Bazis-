@@ -5,19 +5,39 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RapidPack.MainWindow"
         Title="RapidPack">
+    
     <!-- Dodano Grid, TextBox i StackPanel -->
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-        </Grid.RowDefinitions>
-        <StackPanel>
-        
-            <TextBox Watermark="Wpisz wysokość [cm] ..." Width="175">
-            </TextBox>
-            <TextBox Watermark="Wpisz głębokość [cm] ..." Width="177">
-            </TextBox>
-            <TextBox Watermark="Wpisz szerokość [cm] ..." Width="177">
-            </TextBox>
-        </StackPanel>
-    </Grid>
+            
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                  ColumnDefinitions="140,*,*"
+                  RowSpacing="12">
+                
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                    <TextBlock>test1</TextBlock>
+                </StackPanel>
+                
+                <StackPanel Grid.Row="2" Grid.Column="0">
+                    <TextBlock>test2</TextBlock>
+                </StackPanel>
+                
+                <StackPanel Grid.Row="3" Grid.Column="0">
+                    <TextBlock>test3</TextBlock>
+                </StackPanel>
+                
+                <WrapPanel Grid.Row="4" Grid.Column="0">
+                    <TextBlock>test4</TextBlock>
+                </WrapPanel>
+                
+                <WrapPanel Grid.Row="5"><TextBlock>test5</TextBlock></WrapPanel>
+                
+                 <StackPanel Grid.Row="6" Grid.Column="0">
+                     <TextBlock>test6</TextBlock> 
+                 </StackPanel>
+                
+                <StackPanel Grid.Row="7">
+                    <TextBlock>test7</TextBlock>
+                </StackPanel>
+                
+        </Grid>
 </Window>
+
