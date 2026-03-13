@@ -2362,19 +2362,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ratki\\.nuget\\packages\\": {}
+    "/home/ratatakiewicz/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ratki\\RiderProjects\\desktop-rapidpack--Ratkiewicz-Bazis-\\RapidPack.Tests\\RapidPack.Tests.csproj",
+      "projectUniqueName": "/home/ratatakiewicz/RiderProjects/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack.Tests/RapidPack.Tests.csproj",
       "projectName": "RapidPack.Tests",
-      "projectPath": "C:\\Users\\ratki\\RiderProjects\\desktop-rapidpack--Ratkiewicz-Bazis-\\RapidPack.Tests\\RapidPack.Tests.csproj",
-      "packagesPath": "C:\\Users\\ratki\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ratki\\RiderProjects\\desktop-rapidpack--Ratkiewicz-Bazis-\\RapidPack.Tests\\obj\\",
+      "projectPath": "/home/ratatakiewicz/RiderProjects/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack.Tests/RapidPack.Tests.csproj",
+      "packagesPath": "/home/ratatakiewicz/.nuget/packages/",
+      "outputPath": "/home/ratatakiewicz/RiderProjects/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ratki\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/ratatakiewicz/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -2386,8 +2386,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\ratki\\RiderProjects\\desktop-rapidpack--Ratkiewicz-Bazis-\\RapidPack\\RapidPack.csproj": {
-              "projectPath": "C:\\Users\\ratki\\RiderProjects\\desktop-rapidpack--Ratkiewicz-Bazis-\\RapidPack\\RapidPack.csproj"
+            "/home/ratatakiewicz/RiderProjects/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack/RapidPack.csproj": {
+              "projectPath": "/home/ratatakiewicz/RiderProjects/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack/RapidPack.csproj"
             }
           }
         }
@@ -2445,7 +2445,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\ratki\\.dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/home/ratatakiewicz/.dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
