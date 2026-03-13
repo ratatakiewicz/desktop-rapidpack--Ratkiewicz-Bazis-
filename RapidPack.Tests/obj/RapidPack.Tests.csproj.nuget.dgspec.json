@@ -1,34 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "/Users/js/RiderProjects/RapidPack/RapidPack.Tests/RapidPack.Tests.csproj": {}
+    "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack.Tests/RapidPack.Tests.csproj": {}
   },
   "projects": {
-    "/Users/js/RiderProjects/RapidPack/RapidPack.Tests/RapidPack.Tests.csproj": {
+    "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack.Tests/RapidPack.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/js/RiderProjects/RapidPack/RapidPack.Tests/RapidPack.Tests.csproj",
+        "projectUniqueName": "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack.Tests/RapidPack.Tests.csproj",
         "projectName": "RapidPack.Tests",
-        "projectPath": "/Users/js/RiderProjects/RapidPack/RapidPack.Tests/RapidPack.Tests.csproj",
-        "packagesPath": "/Users/js/.nuget/packages/",
-        "outputPath": "/Users/js/RiderProjects/RapidPack/RapidPack.Tests/obj/",
+        "projectPath": "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack.Tests/RapidPack.Tests.csproj",
+        "packagesPath": "/Users/mikolaj/.nuget/packages/",
+        "outputPath": "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/js/.nuget/NuGet/NuGet.Config"
+          "/Users/mikolaj/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "/opt/homebrew/Cellar/dotnet/10.0.102/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/Users/js/RiderProjects/RapidPack/RapidPack/RapidPack.csproj": {
-                "projectPath": "/Users/js/RiderProjects/RapidPack/RapidPack/RapidPack.csproj"
+              "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack/RapidPack.csproj": {
+                "projectPath": "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack/RapidPack.csproj"
               }
             }
           }
@@ -86,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.102/libexec/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -364,23 +363,22 @@
         }
       }
     },
-    "/Users/js/RiderProjects/RapidPack/RapidPack/RapidPack.csproj": {
+    "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack/RapidPack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/js/RiderProjects/RapidPack/RapidPack/RapidPack.csproj",
+        "projectUniqueName": "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack/RapidPack.csproj",
         "projectName": "RapidPack",
-        "projectPath": "/Users/js/RiderProjects/RapidPack/RapidPack/RapidPack.csproj",
-        "packagesPath": "/Users/js/.nuget/packages/",
-        "outputPath": "/Users/js/RiderProjects/RapidPack/RapidPack/obj/",
+        "projectPath": "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack/RapidPack.csproj",
+        "packagesPath": "/Users/mikolaj/.nuget/packages/",
+        "outputPath": "/Users/mikolaj/desktop-rapidpack--Ratkiewicz-Bazis-/RapidPack/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/js/.nuget/NuGet/NuGet.Config"
+          "/Users/mikolaj/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "/opt/homebrew/Cellar/dotnet/10.0.102/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -442,7 +440,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.102/libexec/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
