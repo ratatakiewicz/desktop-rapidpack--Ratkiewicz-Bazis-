@@ -8,33 +8,37 @@
     
     <!-- Dodano Grid, TextBox i StackPanel -->
             
-            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                   ColumnDefinitions="140,*,*"
                   RowSpacing="12">
                 
                 <StackPanel Grid.Row="1" Grid.Column="0">
-                    <TextBlock>test1</TextBlock>
+                    <TextBlock>Wysokość: <TextBox></TextBox></TextBlock>
                 </StackPanel>
                 
                 <StackPanel Grid.Row="2" Grid.Column="0">
-                    <TextBlock>test2</TextBlock>
+                    <TextBlock>Szerokość: <TextBox></TextBox></TextBlock>
                 </StackPanel>
                 
                 <StackPanel Grid.Row="3" Grid.Column="0">
-                    <TextBlock>test3</TextBlock>
+                    <TextBlock>Głębokość: <TextBox></TextBox></TextBlock>
                 </StackPanel>
                 
-                <WrapPanel Grid.Row="4" Grid.Column="0">
-                    <TextBlock>test4</TextBlock>
+                <StackPanel Grid.Row="4" Grid.Column="0">
+                    <TextBlock>Waga: <TextBox></TextBox></TextBlock>
+                </StackPanel>
+                
+                <WrapPanel Grid.Row="5" Grid.Column="0">
+                    <TextBlock>Express: <CheckBox></CheckBox></TextBlock>
                 </WrapPanel>
                 
-                <WrapPanel Grid.Row="5"><TextBlock>test5</TextBlock></WrapPanel>
+                <WrapPanel Grid.Row="6"><TextBlock>test5</TextBlock></WrapPanel>
                 
-                 <StackPanel Grid.Row="6" Grid.Column="0">
+                 <StackPanel Grid.Row="7" Grid.Column="0">
                      <TextBlock>test6</TextBlock> 
                  </StackPanel>
                 
-                <StackPanel Grid.Row="7">
+                <StackPanel Grid.Row="8">
                     <TextBlock>test7</TextBlock>
                 </StackPanel>
                 
