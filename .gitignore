@@ -20,4 +20,5 @@ project.assets.json
 *.userosscache
 *.suo
 *.log
+
 TestResults/
