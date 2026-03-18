@@ -5,39 +5,44 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RapidPack.MainWindow"
         Title="RapidPack">
-    
-    <!-- Dodano Grid, TextBox i StackPanel -->
-            
-            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                   ColumnDefinitions="140,*,*"
                   RowSpacing="12">
                 
                 <StackPanel Grid.Row="1" Grid.Column="0">
-                    <TextBlock>test1</TextBlock>
+                    <TextBlock>Waga (kg):</TextBlock>
+                    <TextBox x:Name="WeightTextBox" Watermark="Wpisz bez jednostki"/>
                 </StackPanel>
                 
                 <StackPanel Grid.Row="2" Grid.Column="0">
-                    <TextBlock>test2</TextBlock>
+                    <TextBlock Text="Szerokość (cm):"/>
+                    <TextBox x:Name="WidthTextBox" Watermark="Wpisz bez jednostki"/>
                 </StackPanel>
                 
                 <StackPanel Grid.Row="3" Grid.Column="0">
-                    <TextBlock>test3</TextBlock>
+                    <TextBlock Text="Wysokość (cm):"/>
+                    <TextBox x:Name="HeightTextBox" Watermark="Wpisz bez jednostki"/>
                 </StackPanel>
                 
-                <WrapPanel Grid.Row="4" Grid.Column="0">
-                    <TextBlock>test4</TextBlock>
+                <StackPanel Grid.Row="4" Grid.Column="0">
+                    <TextBlock Text="Głębokość (cm):"/>
+                    <TextBox x:Name="DepthTextBox" Watermark="Wpisz bez jednostki"/>
+                </StackPanel>
+                
+                <WrapPanel Grid.Row="5">
+                    <CheckBox Content="Ekspres (+15 zł)"/>
                 </WrapPanel>
                 
-                <WrapPanel Grid.Row="5"><TextBlock>test5</TextBlock></WrapPanel>
-                
-                 <StackPanel Grid.Row="6" Grid.Column="0">
-                     <TextBlock>test6</TextBlock> 
-                 </StackPanel>
+                <ComboBox Grid.Row="6" x:Name="ParcelTypeComboBox" SelectedIndex="0">
+                    <ComboBoxItem Content="Standardowa"/>
+                    <ComboBoxItem Content="Ostrożnie (szkło)"/>
+                    <ComboBoxItem Content="Paleta"/>
+                </ComboBox>
                 
                 <StackPanel Grid.Row="7">
-                    <TextBlock>test7</TextBlock>
+                    <Button x:Name="CalculateButton"
+                            Content="Wyceń" />
                 </StackPanel>
-                
         </Grid>
 </Window>
 
