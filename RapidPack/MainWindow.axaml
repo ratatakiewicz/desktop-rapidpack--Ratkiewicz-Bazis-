@@ -5,140 +5,148 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RapidPack.MainWindow"
         Title="RapidPack"
-        Width="480" MinHeight="750"
+        Width="380" Height="575" MinHeight="575" MinWidth="380" MaxWidth="380" MaxHeight="575"
         WindowStartupLocation="CenterScreen">
 
-    <Border Background="#1A1A2E"
-            Padding="32">
-        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+    <Border Background="#1A1A2E" Padding="32">
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
               ColumnDefinitions="*,300,*"
-              RowSpacing="10">
+              RowSpacing="12">
 
-            <!-- Tytuł -->
-            <TextBlock Grid.Row="0" Grid.ColumnSpan="3"
-                       Text="Kalkulator Przesyłek"
-                       FontSize="28" FontWeight="Bold"
-                       Foreground="White"
-                       HorizontalAlignment="Center"
-                       Margin="0,0,0,16"/>
+            
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="3"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,20">
+                <TextBlock Text="📦 Kalkulator Przesyłek"
+                           FontSize="26" 
+                           FontWeight="Bold"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="Oblicz koszt swojej przesyłki"
+                           FontSize="12"
+                           Foreground="#8888AA"
+                           HorizontalAlignment="Center"
+                           Margin="0,4,0,0"/>
+            </StackPanel>
 
-            <TextBlock Grid.Row="1" Grid.Column="1"
-                       Text="Waga (kg)"
-                       FontWeight="Bold"
-                       FontSize="13"
-                       Foreground="White"
-                       HorizontalAlignment="Center"
-                       Margin="0,8,0,0"/>
-            <!-- Waga -->
+            
+            <Border Grid.Row="1" Grid.Column="1"
+                    Background="#16213E"
+                    BorderBrush="#444466"
+                    BorderThickness="1.5"
+                    CornerRadius="10"
+                    Padding="16,12">
+                <StackPanel Spacing="6">
+                    <TextBlock Text="WAGA (kg)"
+                               FontSize="11" 
+                               FontWeight="Bold"
+                               Foreground="#8888AA"
+                               LetterSpacing="1"/>
+                    <TextBox x:Name="WeightTextBox"
+                             Watermark="0"/>
+                </StackPanel>
+            </Border>
+
+            
             <Border Grid.Row="2" Grid.Column="1"
+                    Background="#16213E"
                     BorderBrush="#444466"
                     BorderThickness="1.5"
-                    CornerRadius="8"
-                    Padding="14,10"
-                    Margin="0,0,0,4">
-                <TextBox x:Name="WeightTextBox"
-                         Watermark="Wpisz bez jednostki"/>
-            </Border>
-
-            <!-- Nagłówek Gabaryty -->
-            <TextBlock Grid.Row="3" Grid.Column="1"
-                       Text="Gabaryty (cm)"
-                       FontWeight="Bold"
-                       FontSize="13"
-                       Foreground="White"
-                       HorizontalAlignment="Center"
-                       Margin="0,8,0,0"/>
-
-            <!-- Szerokość -->
-            <Border Grid.Row="4" Grid.Column="1"
-                    BorderBrush="#444466"
-                    BorderThickness="1.5"
-                    CornerRadius="8"
-                    Padding="14,10">
-                <StackPanel Spacing="4">
-                    <TextBlock Text="Szerokość:"
-                               Foreground="#AAAACC"/>
-                    <TextBox x:Name="WidthTextBox"
-                             Watermark="Wpisz bez jednostki"/>
+                    CornerRadius="10"
+                    Padding="16,12">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="GABARYTY (cm)"
+                               FontSize="11" FontWeight="Bold"
+                               Foreground="#8888AA"
+                               LetterSpacing="1"/>
+                    <Grid ColumnDefinitions="*,8,*,8,*">
+                        <StackPanel Grid.Column="0" Spacing="4">
+                            <TextBlock Text="Szerokość" 
+                                       FontSize="11" 
+                                       Foreground="#8888AA"/>
+                            <TextBox x:Name="WidthTextBox" Watermark="0"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="2" Spacing="4">
+                            <TextBlock Text="Wysokość" 
+                                       FontSize="11" 
+                                       Foreground="#8888AA"/>
+                            <TextBox x:Name="HeightTextBox" Watermark="0"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="4" Spacing="4">
+                            <TextBlock Text="Głębokość" 
+                                       FontSize="11" 
+                                       Foreground="#8888AA"/>
+                            <TextBox x:Name="DepthTextBox" Watermark="0"/>
+                        </StackPanel>
+                    </Grid>
                 </StackPanel>
             </Border>
 
-            <!-- Wysokość -->
-            <Border Grid.Row="5" Grid.Column="1"
+            
+            <Border Grid.Row="3" Grid.Column="1"
+                    Background="#16213E"
                     BorderBrush="#444466"
                     BorderThickness="1.5"
-                    CornerRadius="8"
-                    Padding="14,10">
-                <StackPanel Spacing="4">
-                    <TextBlock Text="Wysokość:"
-                               Foreground="#AAAACC"/>
-                    <TextBox x:Name="HeightTextBox"
-                             Watermark="Wpisz bez jednostki"/>
-                </StackPanel>
-            </Border>
-
-            <!-- Głębokość -->
-            <Border Grid.Row="6" Grid.Column="1"
-                    BorderBrush="#444466"
-                    BorderThickness="1.5"
-                    CornerRadius="8"
-                    Padding="14,10">
-                <StackPanel Spacing="4">
-                    <TextBlock Text="Głębokość:"
-                               Foreground="#AAAACC"/>
-                    <TextBox x:Name="DepthTextBox"
-                             Watermark="Wpisz bez jednostki"/>
-                </StackPanel>
-            </Border>
-
-            <!-- Checkbox Ekspres -->
-            <Border Grid.Row="7" Grid.Column="1"
-                    BorderBrush="#444466"
-                    BorderThickness="1.5"
-                    CornerRadius="8"
-                    Padding="14,10"
-                    Margin="0,8,0,0">
-                <CheckBox x:Name="ExpressCheckBox"
-                          Content="Ekspres (+15 zł)"
-                          Foreground="White"
-                          FontSize="13"
-                          HorizontalAlignment="Center"
-                          />
-            </Border>
-
-            <!-- ComboBox typ przesyłki -->
-            <Border Grid.Row="8" Grid.Column="1"
-                    BorderBrush="#444466"
-                    BorderThickness="1.5"
-                    CornerRadius="8"
-                    Padding="14,10"
-                    Margin="0,4,0,0">
-                <StackPanel Spacing="4">
-                    <TextBlock Text="Typ przesyłki:"
-                               Foreground="#AAAACC"/>
+                    CornerRadius="10"
+                    Padding="16,12">
+                <StackPanel Spacing="6">
+                    <TextBlock Text="TYP PRZESYŁKI"
+                               FontSize="11" FontWeight="Bold"
+                               Foreground="#8888AA"
+                               LetterSpacing="1"/>
                     <ComboBox x:Name="ParcelTypeComboBox"
                               SelectedIndex="0"
-                              
                               HorizontalAlignment="Stretch">
-                        <ComboBoxItem Content="Standardowa"/>
-                        <ComboBoxItem Content="Ostrożnie (szkło)"/>
-                        <ComboBoxItem Content="Paleta"/>
+                        <ComboBoxItem Content="📦  Standardowa"/>
+                        <ComboBoxItem Content="🔮  Ostrożnie (szkło)"/>
+                        <ComboBoxItem Content="🪵  Paleta"/>
                     </ComboBox>
                 </StackPanel>
             </Border>
 
-            <!-- Przycisk -->
-            <Button Grid.Row="9" Grid.Column="1"
-                    x:Name="CalculateButton"
-                    Content="Wyceń"
-                    HorizontalAlignment="Stretch"
-                    Padding="0,14"
-                    FontSize="16"
-                    FontWeight="Bold"
-                    Margin="0,16,0,0"
-                    HorizontalContentAlignment="Center"
-                    />
+            
+            <Border Grid.Row="4" Grid.Column="1"
+                    Background="#16213E"
+                    BorderBrush="#444466"
+                    BorderThickness="1.5"
+                    CornerRadius="10"
+                    Padding="16,12">
+                <CheckBox x:Name="ExpressCheckBox"
+                          Foreground="White"
+                          FontSize="13"
+                          HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <TextBlock Text="⚡" FontSize="15"/>
+                        <StackPanel>
+                            <TextBlock Text="Dostawa ekspresowa" 
+                                       Foreground="White" 
+                                       FontWeight="SemiBold"/>
+                            <TextBlock Text="+15 zł" 
+                                       Foreground="#8888AA" 
+                                       FontSize="11"/>
+                        </StackPanel>
+                    </StackPanel>
+                </CheckBox>
+            </Border>
 
+            
+            <Border Grid.Row="5" Grid.Column="1"
+                    Height="1"
+                    Background="#333355"
+                    Margin="0,4"/>
+
+            
+            <Button Grid.Row="6" Grid.Column="1"
+                    x:Name="CalculateButton"
+                    Content="Wyceń przesyłkę →"
+                    HorizontalAlignment="Stretch"
+                    HorizontalContentAlignment="Center"
+                    Padding="0,16"
+                    FontSize="15"
+                    FontWeight="Bold"
+                    Background="#5C6BC0"
+                    Foreground="White"
+                    CornerRadius="10"/>
         </Grid>
     </Border>
 </Window>
