@@ -5,20 +5,19 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RapidPack.MainWindow"
         Title="RapidPack"
-        Width="380" Height="575" MinHeight="575" MinWidth="380" MaxWidth="380" MaxHeight="575"
+        Width="500" Height="740" MinHeight="740" MinWidth="500" MaxWidth="500" MaxHeight="740"
         WindowStartupLocation="CenterScreen">
 
     <Border Background="#1A1A2E" Padding="32">
-        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
               ColumnDefinitions="*,300,*"
               RowSpacing="12">
 
-            
             <StackPanel Grid.Row="0" Grid.ColumnSpan="3"
                         HorizontalAlignment="Center"
                         Margin="0,0,0,20">
                 <TextBlock Text="📦 Kalkulator Przesyłek"
-                           FontSize="26" 
+                           FontSize="26"
                            FontWeight="Bold"
                            Foreground="White"
                            HorizontalAlignment="Center"/>
@@ -29,7 +28,6 @@
                            Margin="0,4,0,0"/>
             </StackPanel>
 
-            
             <Border Grid.Row="1" Grid.Column="1"
                     Background="#16213E"
                     BorderBrush="#444466"
@@ -38,7 +36,7 @@
                     Padding="16,12">
                 <StackPanel Spacing="6">
                     <TextBlock Text="WAGA (kg)"
-                               FontSize="11" 
+                               FontSize="11"
                                FontWeight="Bold"
                                Foreground="#8888AA"
                                LetterSpacing="1"/>
@@ -47,7 +45,6 @@
                 </StackPanel>
             </Border>
 
-            
             <Border Grid.Row="2" Grid.Column="1"
                     Background="#16213E"
                     BorderBrush="#444466"
@@ -61,20 +58,20 @@
                                LetterSpacing="1"/>
                     <Grid ColumnDefinitions="*,8,*,8,*">
                         <StackPanel Grid.Column="0" Spacing="4">
-                            <TextBlock Text="Szerokość" 
-                                       FontSize="11" 
+                            <TextBlock Text="Szerokość"
+                                       FontSize="11"
                                        Foreground="#8888AA"/>
                             <TextBox x:Name="WidthTextBox" Watermark="0"/>
                         </StackPanel>
                         <StackPanel Grid.Column="2" Spacing="4">
-                            <TextBlock Text="Wysokość" 
-                                       FontSize="11" 
+                            <TextBlock Text="Wysokość"
+                                       FontSize="11"
                                        Foreground="#8888AA"/>
                             <TextBox x:Name="HeightTextBox" Watermark="0"/>
                         </StackPanel>
                         <StackPanel Grid.Column="4" Spacing="4">
-                            <TextBlock Text="Głębokość" 
-                                       FontSize="11" 
+                            <TextBlock Text="Głębokość"
+                                       FontSize="11"
                                        Foreground="#8888AA"/>
                             <TextBox x:Name="DepthTextBox" Watermark="0"/>
                         </StackPanel>
@@ -82,7 +79,6 @@
                 </StackPanel>
             </Border>
 
-            
             <Border Grid.Row="3" Grid.Column="1"
                     Background="#16213E"
                     BorderBrush="#444466"
@@ -104,7 +100,6 @@
                 </StackPanel>
             </Border>
 
-            
             <Border Grid.Row="4" Grid.Column="1"
                     Background="#16213E"
                     BorderBrush="#444466"
@@ -118,24 +113,22 @@
                     <StackPanel Orientation="Horizontal" Spacing="8">
                         <TextBlock Text="⚡" FontSize="15"/>
                         <StackPanel>
-                            <TextBlock Text="Dostawa ekspresowa" 
-                                       Foreground="White" 
+                            <TextBlock Text="Dostawa ekspresowa"
+                                       Foreground="White"
                                        FontWeight="SemiBold"/>
-                            <TextBlock Text="+15 zł" 
-                                       Foreground="#8888AA" 
+                            <TextBlock Text="+15 zł"
+                                       Foreground="#8888AA"
                                        FontSize="11"/>
                         </StackPanel>
                     </StackPanel>
                 </CheckBox>
             </Border>
 
-            
             <Border Grid.Row="5" Grid.Column="1"
                     Height="1"
                     Background="#333355"
                     Margin="0,4"/>
 
-            
             <Button Grid.Row="6" Grid.Column="1"
                     x:Name="CalculateButton"
                     Content="Wyceń przesyłkę →"
@@ -146,7 +139,23 @@
                     FontWeight="Bold"
                     Background="#5C6BC0"
                     Foreground="White"
-                    CornerRadius="10"/>
+                    CornerRadius="10"
+                    Click="OnCalculateClick"/>
+
+            <TextBlock Grid.Row="7" Grid.Column="1"
+                       x:Name="ResultTextBlock"
+                       Text="Cena: 0.00 zł"
+                       FontSize="20"
+                       Foreground="#00FF88"
+                       HorizontalAlignment="Center"
+                       Margin="0,8,0,0"/>
+
+            <TextBlock Grid.Row="8" Grid.Column="1"
+                       x:Name="SummaryTextBlock"
+                       FontSize="12"
+                       Foreground="#8888AA"
+                       HorizontalAlignment="Center"
+                       Margin="0,8,0,0"/>
         </Grid>
     </Border>
 </Window>
