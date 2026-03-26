@@ -13,6 +13,7 @@ namespace RapidPack
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         /// <summary>
@@ -36,7 +37,8 @@ namespace RapidPack
 
                 // Przekazanie danych do metody obliczeniowej (Zadanie #6)
                 decimal price = _calculator.CalculatePrice(width, height, depth, weight, isExpress, type);
-
+                string summary = _calculator.GetSummary(width, height, depth, weight, isExpress, type);
+                SummaryTextBlock.Text = summary;
                 // Aktualizacja interfejsu użytkownika o wyliczoną kwotę
                 ResultTextBlock.Text = $"Sugerowana cena: {price:C2}";
                 ResultTextBlock.Foreground = Avalonia.Media.Brushes.SpringGreen;
@@ -53,6 +55,7 @@ namespace RapidPack
                 ResultTextBlock.Text = "Wystąpił błąd podczas obliczeń.";
                 ResultTextBlock.Foreground = Avalonia.Media.Brushes.Red;
             }
+            
         }
     }
 }
