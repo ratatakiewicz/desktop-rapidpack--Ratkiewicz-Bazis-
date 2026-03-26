@@ -4,40 +4,141 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RapidPack.MainWindow"
-        Title="RapidPack">
-    
-    <!-- Dodano Grid, TextBox i StackPanel -->
-            
-            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
-                  ColumnDefinitions="140,*,*"
-                  RowSpacing="12">
-                
-                <StackPanel Grid.Row="1" Grid.Column="0">
-                    <TextBlock>test1</TextBlock>
-                </StackPanel>
-                
-                <StackPanel Grid.Row="2" Grid.Column="0">
-                    <TextBlock>test2</TextBlock>
-                </StackPanel>
-                
-                <StackPanel Grid.Row="3" Grid.Column="0">
-                    <TextBlock>test3</TextBlock>
-                </StackPanel>
-                
-                <WrapPanel Grid.Row="4" Grid.Column="0">
-                    <TextBlock>test4</TextBlock>
-                </WrapPanel>
-                
-                <WrapPanel Grid.Row="5"><TextBlock>test5</TextBlock></WrapPanel>
-                
-                 <StackPanel Grid.Row="6" Grid.Column="0">
-                     <TextBlock>test6</TextBlock> 
-                 </StackPanel>
-                
-                <StackPanel Grid.Row="7">
-                    <TextBlock>test7</TextBlock>
-                </StackPanel>
-                
-        </Grid>
-</Window>
+        Title="RapidPack"
+        Width="480" MinHeight="750"
+        WindowStartupLocation="CenterScreen">
 
+    <Border Background="#1A1A2E"
+            Padding="32">
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+              ColumnDefinitions="*,300,*"
+              RowSpacing="10">
+
+            <!-- Tytuł -->
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="3"
+                       Text="Kalkulator Przesyłek"
+                       FontSize="28" FontWeight="Bold"
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,16"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="1"
+                       Text="Waga (kg)"
+                       FontWeight="Bold"
+                       FontSize="13"
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       Margin="0,8,0,0"/>
+            <!-- Waga -->
+            <Border Grid.Row="2" Grid.Column="1"
+                    BorderBrush="#444466"
+                    BorderThickness="1.5"
+                    CornerRadius="8"
+                    Padding="14,10"
+                    Margin="0,0,0,4">
+                <TextBox x:Name="WeightTextBox"
+                         Watermark="Wpisz bez jednostki"/>
+            </Border>
+
+            <!-- Nagłówek Gabaryty -->
+            <TextBlock Grid.Row="3" Grid.Column="1"
+                       Text="Gabaryty (cm)"
+                       FontWeight="Bold"
+                       FontSize="13"
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       Margin="0,8,0,0"/>
+
+            <!-- Szerokość -->
+            <Border Grid.Row="4" Grid.Column="1"
+                    BorderBrush="#444466"
+                    BorderThickness="1.5"
+                    CornerRadius="8"
+                    Padding="14,10">
+                <StackPanel Spacing="4">
+                    <TextBlock Text="Szerokość:"
+                               Foreground="#AAAACC"/>
+                    <TextBox x:Name="WidthTextBox"
+                             Watermark="Wpisz bez jednostki"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Wysokość -->
+            <Border Grid.Row="5" Grid.Column="1"
+                    BorderBrush="#444466"
+                    BorderThickness="1.5"
+                    CornerRadius="8"
+                    Padding="14,10">
+                <StackPanel Spacing="4">
+                    <TextBlock Text="Wysokość:"
+                               Foreground="#AAAACC"/>
+                    <TextBox x:Name="HeightTextBox"
+                             Watermark="Wpisz bez jednostki"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Głębokość -->
+            <Border Grid.Row="6" Grid.Column="1"
+                    BorderBrush="#444466"
+                    BorderThickness="1.5"
+                    CornerRadius="8"
+                    Padding="14,10">
+                <StackPanel Spacing="4">
+                    <TextBlock Text="Głębokość:"
+                               Foreground="#AAAACC"/>
+                    <TextBox x:Name="DepthTextBox"
+                             Watermark="Wpisz bez jednostki"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Checkbox Ekspres -->
+            <Border Grid.Row="7" Grid.Column="1"
+                    BorderBrush="#444466"
+                    BorderThickness="1.5"
+                    CornerRadius="8"
+                    Padding="14,10"
+                    Margin="0,8,0,0">
+                <CheckBox x:Name="ExpressCheckBox"
+                          Content="Ekspres (+15 zł)"
+                          Foreground="White"
+                          FontSize="13"
+                          HorizontalAlignment="Center"
+                          />
+            </Border>
+
+            <!-- ComboBox typ przesyłki -->
+            <Border Grid.Row="8" Grid.Column="1"
+                    BorderBrush="#444466"
+                    BorderThickness="1.5"
+                    CornerRadius="8"
+                    Padding="14,10"
+                    Margin="0,4,0,0">
+                <StackPanel Spacing="4">
+                    <TextBlock Text="Typ przesyłki:"
+                               Foreground="#AAAACC"/>
+                    <ComboBox x:Name="ParcelTypeComboBox"
+                              SelectedIndex="0"
+                              
+                              HorizontalAlignment="Stretch">
+                        <ComboBoxItem Content="Standardowa"/>
+                        <ComboBoxItem Content="Ostrożnie (szkło)"/>
+                        <ComboBoxItem Content="Paleta"/>
+                    </ComboBox>
+                </StackPanel>
+            </Border>
+
+            <!-- Przycisk -->
+            <Button Grid.Row="9" Grid.Column="1"
+                    x:Name="CalculateButton"
+                    Content="Wyceń"
+                    HorizontalAlignment="Stretch"
+                    Padding="0,14"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Margin="0,16,0,0"
+                    HorizontalContentAlignment="Center"
+                    />
+
+        </Grid>
+    </Border>
+</Window>
