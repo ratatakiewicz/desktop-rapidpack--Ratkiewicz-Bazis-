@@ -5,16 +5,15 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RapidPack.MainWindow"
         Title="RapidPack"
-        Width="480" MinHeight="750"
+        Width="480" MinHeight="850"
         WindowStartupLocation="CenterScreen">
 
     <Border Background="#1A1A2E"
             Padding="32">
-        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
               ColumnDefinitions="*,300,*"
               RowSpacing="10">
 
-            <!-- Tytuł -->
             <TextBlock Grid.Row="0" Grid.ColumnSpan="3"
                        Text="Kalkulator Przesyłek"
                        FontSize="28" FontWeight="Bold"
@@ -29,7 +28,6 @@
                        Foreground="White"
                        HorizontalAlignment="Center"
                        Margin="0,8,0,0"/>
-            <!-- Waga -->
             <Border Grid.Row="2" Grid.Column="1"
                     BorderBrush="#444466"
                     BorderThickness="1.5"
@@ -40,7 +38,6 @@
                          Watermark="Wpisz bez jednostki"/>
             </Border>
 
-            <!-- Nagłówek Gabaryty -->
             <TextBlock Grid.Row="3" Grid.Column="1"
                        Text="Gabaryty (cm)"
                        FontWeight="Bold"
@@ -49,7 +46,6 @@
                        HorizontalAlignment="Center"
                        Margin="0,8,0,0"/>
 
-            <!-- Szerokość -->
             <Border Grid.Row="4" Grid.Column="1"
                     BorderBrush="#444466"
                     BorderThickness="1.5"
@@ -63,7 +59,6 @@
                 </StackPanel>
             </Border>
 
-            <!-- Wysokość -->
             <Border Grid.Row="5" Grid.Column="1"
                     BorderBrush="#444466"
                     BorderThickness="1.5"
@@ -77,7 +72,6 @@
                 </StackPanel>
             </Border>
 
-            <!-- Głębokość -->
             <Border Grid.Row="6" Grid.Column="1"
                     BorderBrush="#444466"
                     BorderThickness="1.5"
@@ -91,7 +85,6 @@
                 </StackPanel>
             </Border>
 
-            <!-- Checkbox Ekspres -->
             <Border Grid.Row="7" Grid.Column="1"
                     BorderBrush="#444466"
                     BorderThickness="1.5"
@@ -106,7 +99,6 @@
                           />
             </Border>
 
-            <!-- ComboBox typ przesyłki -->
             <Border Grid.Row="8" Grid.Column="1"
                     BorderBrush="#444466"
                     BorderThickness="1.5"
@@ -118,7 +110,6 @@
                                Foreground="#AAAACC"/>
                     <ComboBox x:Name="ParcelTypeComboBox"
                               SelectedIndex="0"
-                              
                               HorizontalAlignment="Stretch">
                         <ComboBoxItem Content="Standardowa"/>
                         <ComboBoxItem Content="Ostrożnie (szkło)"/>
@@ -127,7 +118,6 @@
                 </StackPanel>
             </Border>
 
-            <!-- Przycisk -->
             <Button Grid.Row="9" Grid.Column="1"
                     x:Name="CalculateButton"
                     Content="Wyceń"
@@ -137,7 +127,15 @@
                     FontWeight="Bold"
                     Margin="0,16,0,0"
                     HorizontalContentAlignment="Center"
-                    />
+                    Click="OnCalculateClick"/>
+
+            <TextBlock Grid.Row="10" Grid.Column="1"
+                       x:Name="ResultTextBlock"
+                       Text="Cena: 0.00 zł"
+                       FontSize="20"
+                       Foreground="#00FF88"
+                       HorizontalAlignment="Center"
+                       Margin="0,20,0,0"/>
 
         </Grid>
     </Border>
